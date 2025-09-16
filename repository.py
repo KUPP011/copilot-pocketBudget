@@ -128,3 +128,10 @@ def delete_transaction(db: Session, tx_id: int) -> bool:
     db.delete(tx)
     db.commit()
     return True
+
+def totals(db: Session):
+    inc = db.exec(select(Transaction).where(Transaction.kind == TxKind.income)).all()
+    exp = db.exec(select(Transaction).where(Transaction.kind == TxKind.expense)).all()
+    sum_inc = sum(t.amount for t in inc)
+    sum_exp = sum(t.amount for t in exp)
+    return sum_inc, sum_exp, sum_inc - sum_exp
