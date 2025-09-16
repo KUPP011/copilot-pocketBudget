@@ -36,8 +36,7 @@ def add_transaction(
     tx = Transaction(
         date=date,
         description=description,
-        # BUG - negate amount incorrectly
-        amount=-float(amount),
+        amount=float(amount),
         kind=kind,
         category_id=category_id,
     )
