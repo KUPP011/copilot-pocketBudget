@@ -76,3 +76,52 @@ Thumbs.db
 
 # Logs
 *.log
+=======
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# pytest cache
+.pytest_cache/
+
+# Virtual environment
+.venv/
+venv/
+ENV/
+env/
+
+# Database files
+*.db
+*.sqlite3
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+=======
+# Ignore Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Ignore virtual environments
+.venv/
+env/
+venv/
+
+# Ignore cache only in tests folder
+tests/__pycache__/
+tests/_pycache_/
+
+# Ignore pytest cache
+.pytest_cache/
