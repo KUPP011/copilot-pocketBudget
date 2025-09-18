@@ -29,3 +29,20 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.temp
+=======
+# Ignore Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Ignore virtual environments
+.venv/
+env/
+venv/
+
+# Ignore cache only in tests folder
+tests/__pycache__/
+tests/_pycache_/
+
+# Ignore pytest cache
+.pytest_cache/
